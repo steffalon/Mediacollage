@@ -1,0 +1,1 @@
+Start de code in game.class! Dat is de main class.
