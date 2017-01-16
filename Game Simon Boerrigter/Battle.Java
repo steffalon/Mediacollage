@@ -22,9 +22,18 @@ public class Battle
     // Laat mogelijke commands zien voor user.
     System.out.println("______________");
     System.out.println("Its your turn!");
-    System.out.println("0 = Atack");
-    System.out.println("1 = Run away");
-    System.out.println("2 = Heal");
+//CHALLANGE 1!:
+//Er missen hier wat println(print line)
+//Geef hier instructies wat de speler kan kiezen
+//Kijk naar de code beneden wat er gebeurt als user 0, 1 of 2 gebruikt
+//bijvoorbeeld: System.out.println("1 = Gooien");
+
+
+
+
+
+
+
     System.out.print("Your input: ");
     try{
     choice = Integer.parseInt(in.nextLine());
@@ -70,29 +79,47 @@ if (hidden!=1){ // Enemy ziet speler niet en dus kan geen damage doen(moet wacht
 } else {
   userLife -= rand.nextInt(20) + 1; // Enemy gaat damage doen. Ziet speler.
 }
-// health niet lager dan 0 laten zien!
-if (userLife<=0){
-  userLife = 0;
-} else if (enemyLife<=0){
-  enemyLife = 0;
-}
+
+//challange 2
+//Je hebt vast wel gemerkt dat ik if, else en else if heb gebruikt.
+//If is vertaalt in het nederlands "als"
+//voorbeeld:
+//  if (choice==2){
+//  System.out.println("Healing....");
+//  music.playSound("heal");
+//  userLife += rand.nextInt(25) + 1;
+//  }
+//
+//Betekend: Als de user input 2 gebrukt, {
+//zeg dat je gaat healen
+//speel een geluid af.
+//heal met een random getal naar boven
+//}
+//
+//Challange 2 is dat je de levens van de player en de enemy niet in een min getal komt.
+//is kleiner dan zeg je zo in java: <=
+//Maak een if statement: Als userLife kleiner is dan 0, userLife is 0.
+//Maak daarna een elif statement: Als enemyLife kleiner is dan 0, enemyLife is 0.
+//Bestudeer goed wat voor scrijf stijl je moet gebruiken. zoals { } ; ()
+
+
+
+
+
 // Laat status zien(levens).
 System.out.println("Status: Your health: "+userLife+" Enemy health: "+enemyLife);
 }
+//challange 3
+//Onder zie je 2 boleans. Betekend kan waar of niet waar zijn. True of false.
+//de naam zegt het al [userDead].
+//Maak met een if statement: als userLife <= dan 0, return true. anders(else) return false.
+//Doe het zelfde bij enemyDead.
     public boolean userDead()
     {
-      if(userLife<=0){
-        return true;
-      } else {
-        return false;
-      }
+
     }
     public boolean enemyDead()
     {
-      if(enemyLife<=0){
-        return true;
-      } else {
-        return false;
-      }
+
     }
   }

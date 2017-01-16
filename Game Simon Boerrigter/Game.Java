@@ -47,7 +47,6 @@ public class Game
       System.exit(1);
     }
     System.out.println(name+" has reached the safe area were people are getting protected. "+name+" is going to stay and live here a good life.");
-    System.out.println("Gemaakt door Simon Boerrigter.");
     music.playSound("victory");
   }
 }
